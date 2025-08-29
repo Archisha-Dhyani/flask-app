@@ -18,7 +18,7 @@ pipeline{
     stage('create container'){
       steps{
         sh 'echo "Creating container"'
-        sh 'docker run --name container_disc -p 5000:5000 discount_image'
+        sh 'docker run --name container_disc -d -p 5000:5000 discount_image'
 
       }
     }
